@@ -3,7 +3,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from xgboost.sklearn import XGBClassifier
 
-SAMPLE_RATE = 2 # Frequencia do sinal (LF)
+SAMPLE_RATE = 1 # Frequencia do sinal (LF)
 
 APPLIANCES = ['washer dryer', 'microwave', 'dish washer', 'fridge']
 
@@ -18,7 +18,7 @@ RP_PARAMS = {
 
 IMG_SIZE = 32
 
-INPUT_SHAPE = (IMG_SIZE, IMG_SIZE, 1)
+INPUT_SHAPE = (IMG_SIZE, IMG_SIZE, 3)
 
 # # Estimator params
 SEED = 33
@@ -32,8 +32,8 @@ ESTIMATORS = {
 EVALUATION_METRICS = {
     'accuracy': 'accuracy_score', 
     'f1': 'f1_macro',
-    'precision': 'precision_score', 
-    'recall':  'recall_score'
+    'precision': 'precision_macro', 
+    'recall':  'recall_macro'
 }
 
 # Window size (sliding window)

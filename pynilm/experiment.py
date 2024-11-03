@@ -111,6 +111,12 @@ class Experiment:
                     y_train = np.array(self.train_activations[appliance])
                     y_test = np.array(self.test_activations[appliance])
 
+                    print('X_train', X_train.shape)
+                    print('y_train', y_train.shape)
+
+                    print('X_test', X_train.shape)
+                    print('y_test', y_test.shape)
+
                     # Fitting the model
                     # start = time.time()
                     # model = clone(model_pipeline)

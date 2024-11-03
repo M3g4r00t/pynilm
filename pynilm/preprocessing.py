@@ -84,6 +84,7 @@ class DeepLearningTransformer(BaseEstimator, TransformerMixin):
     def transform(self, X):
         feature_extractor, preprocess_input = self._build_transformer()
         if preprocess_input:
+            print(np.shape(X))
             X = preprocess_input(X) # np.array([self.preprocess_input(x) for x in X])
         features = feature_extractor.predict(X)
         return features
