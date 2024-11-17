@@ -192,5 +192,4 @@ cython_debug/
 data/redd.h5
 data/ukdale.h5
 extras/multi-nilm
-extras/multi-nilm
 extras/nilmtk-contrib
